@@ -1,18 +1,16 @@
-<! doctype html>
+<!doctype html>
 <html lang="id">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta
 name="description"
-content="Formulir prototipe untuk mencatat makanan berlebih yang akan ditawarkan melalui SisaBaik."
->
+content="Formulir prototipe untuk mencatat makanan berlebih yang akan ditawarkan melalui SisaBaik.">
 <title>Tawarkan Makanan | SisaBaik</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <a class="skip-link" href="#konten-utama">Lewati ke konten utama</a>
-
 <header class="site-header">
 <div class="container header-layout">
 <p class="brand">SisaBaik</p>
@@ -29,40 +27,33 @@ Tawarkan makanan
 </nav>
 </div>
 </header>
-
 <main class="container" id="konten-utama" tabindex="-1">
 <div class="page-heading">
 <h1>Catat penawaran makanan berlebih</h1>
 <p class="lead">
-Gunakan data fiktif selama praktikum. Jangan menawarkan makanan yang
-rusak, kedaluwarsa, tercemar, atau tidak aman dikonsumsi.
+    Gunakan data fiktif selama praktikum. Jangan menawarkan makanan yang rusak, kedaluwarsa, tercemar, atau tidak aman dikonsumsi.
 </p>
-<p class="required-note" id="petunjuk-wajib">Kolom bertanda <strong> *< /strong> wajib diisi .< /p>
+<p class="required-note" id="petunjuk-wajib">Kolom bertanda <strong>*</strong> wajib diisi.</p>
 </div>
-
 <form
 class="form-card"
 action="tawarkan-makanan.html"
 method="get"
-aria-describedby="petunjuk-wajib"
->
+aria-describedby="petunjuk-wajib"></form>
 <fieldset class="form-section">
 <legend>Identitas makanan</legend>
-
 <p>
-<label for="nama-makanan">Nama makanan *< /label><br>
+<label for="nama-makanan">Nama makanan *</label><br>
 <input
 type="text"
 id="nama-makanan"
 name="nama_makanan"
 minlength="3"
 maxlength="120"
-required
->
+required>
 </p>
-
 <p>
-<label for="kategori">Kategori *< /label><br>
+<label for="kategori">Kategori *</label><br>
 <select id="kategori" name="kategori" required>
 <option value="">Pilih kategori</option>
 <option value="makanan-siap-saji">Makanan siap saji</option>
@@ -70,13 +61,11 @@ required
 <option value="buah-sayur">Buah atau sayur</option>
 <option value="minuman">Minuman</option>
 <option value="bahan-pangan">Bahan pangan</option>
-
 <option value="lainnya">Lainnya</option>
 </select>
 </p>
-
 <p>
-<label for="deskripsi-makanan">Deskripsi kondisi makanan *< /label><br>
+<label for="deskripsi-makanan">Deskripsi kondisi makanan *</label><br>
 <textarea
 id="deskripsi-makanan"
 name="deskripsi_makanan"
@@ -91,12 +80,10 @@ Jelaskan isi, kondisi, waktu produksi, dan alasan menjadi stok berlebih.
 </small>
 </p>
 </fieldset>
-
 <fieldset class="form-section">
 <legend>Jumlah dan skema pemulihan nilai</legend>
-
 <p>
-<label for="jumlah">Jumlah tersedia *< /label><br>
+<label for="jumlah">Jumlah tersedia *</label><br>
 <input
 type="number"
 id="jumlah"
@@ -104,11 +91,10 @@ name="jumlah"
 min="1"
 max="1000"
 step="1"
-required
->
+required>
 </p>
 <p>
-<label for="satuan">Satuan *< /label><br>
+<label for="satuan">Satuan *</label><br>
 <select id="satuan" name="satuan" required>
 <option value="">Pilih satuan</option>
 <option value="porsi">Porsi</option>
@@ -118,9 +104,8 @@ required
 <option value="liter">Liter</option>
 </select>
 </p>
-
 <p>
-<label for="harga-normal">Harga normal per satuan (rupiah) *< /label><br>
+<label for="harga-normal">Harga normal per satuan (rupiah) *</label><br>
 <input
 type="number"
 id="harga-normal"
@@ -131,9 +116,8 @@ step="500"
 required
 >
 </p>
-
 <fieldset class="form-section">
-<legend>Jenis penawaran *< /legend>
+<legend>Jenis penawaran *</legend>
 <p>
 <input
 type="radio"
@@ -149,46 +133,39 @@ required
 type="radio"
 id="jenis-donasi"
 name="jenis_penawaran"
-value="donasi"
-
+value="donasi">
 <label for="jenis-donasi">Disalurkan tanpa biaya</label>
 </p>
 </fieldset>
-
 <p>
-<label for="harga-pemulihan">Harga penawaran per satuan (rupiah) *< /label><br>
+<label for="harga-pemulihan">Harga penawaran per satuan (rupiah) *</label><br>
 <input
 type="number"
 id="harga-pemulihan"
 name="harga_penawaran"
 min="0"
 max="10000000"
-step="500'
+step="500"
 aria-describedby="bantuan-harga"
 required
 ><br>
 <small id="bantuan-harga">
-Isi 0 jika makanan disalurkan tanpa biaya. Perbandingan dengan
-harga normal akan divalidasi menggunakan JavaScript pada chapter berikutnya.
+Isi O jika makanan disalurkan tanpa biaya. Perbandingan dengan harga normal akan divalidasi menggunakan JavaScript pada chapter berikutnya.
 </small>
 </p>
 </fieldset>
-
 <fieldset class="form-section">
 <legend>Keamanan dan pengambilan</legend>
-
 <p>
-<label for="batas-pengambilan">Batas waktu pengambilan *< /label><br>
+    <label for="batas-pengambilan">Batas waktu pengambilan *</label><br>
 <input
 type="datetime-local"
 id="batas-pengambilan"
 name="batas_pengambilan"
-required
->
+required>
 </p>
-
 <p>
-<label for="petunjuk-penyimpanan">Petunjuk penyimpanan *< /label><br>
+<label for="petunjuk-penyimpanan">Petunjuk penyimpanan *</label><br>
 <textarea
 id="petunjuk-penyimpanan"
 name="petunjuk_penyimpanan"
@@ -198,7 +175,6 @@ maxlength="300"
 required
 ></textarea>
 </p>
-
 <fieldset class="form-section">
 <legend>Informasi alergen yang diketahui</legend>
 <p>
@@ -214,14 +190,12 @@ required
 <label for="alergen-telur">Telur</label>
 </p>
 <p>
-
-<input type="checkbox" id="alergen-kacang" name="alergen" value="kacang">
+    <input type="checkbox" id="alergen-kacang" name="alergen" value="kacang">
 <label for="alergen-kacang">Kacang</label>
 </p>
 </fieldset>
-
 <p>
-<label for="lokasi-pengambilan">Lokasi pengambilan *< /label><br>
+<label for="lokasi-pengambilan">Lokasi pengambilan *</label><br>
 <textarea
 id="lokasi-pengambilan"
 name="lokasi_pengambilan"
@@ -233,7 +207,6 @@ required
 ></textarea>
 </p>
 </fieldset>
-
 <fieldset class="form-section">
 <legend>Konfirmasi keamanan pangan</legend>
 <p>
@@ -242,11 +215,9 @@ type="checkbox"
 id="konfirmasi-keamanan"
 name="konfirmasi_keamanan"
 value="terkonfirmasi"
-required
->
+required>
 <label for="konfirmasi-keamanan">
-Saya memastikan contoh makanan ini masih layak konsumsi dan
-informasi kondisi serta alergennya telah ditulis dengan jujur. *
+Saya memastikan contoh makanan ini masih layak konsumsi dan informasi kondisi serta alergennya telah ditulis dengan jujur. *
 </label>
 </p>
 </fieldset>
@@ -255,22 +226,16 @@ informasi kondisi serta alergennya telah ditulis dengan jujur. *
 <button class="button button-secondary" type="reset">Kosongkan formulir</button>
 </p>
 </form>
-
 <section class="section" aria-labelledby="batas-validasi-html">
 <h2 id="batas-validasi-html">Batas validasi pada tahap HTML</h2>
 <p>
-Atribut HTML dapat memeriksa isian wajib, format dasar, dan rentang
-angka. Namun, HTML belum dapat memastikan harga penawaran lebih kecil
-daripada harga normal atau batas pengambilan berada di masa depan.
-Aturan lintas-kolom tersebut akan ditambahkan dengan JavaScript dan
-tetap diperiksa ulang pada server.
+Atribut HTML dapat memeriksa isian wajib, format dasar, dan rentang angka. Namun, HTML belum dapat memastikan harga penawaran lebih kecil daripada harga normal atau batas pengambilan berada di masa depan. Aturan lintas-kolom tersebut akan ditambahkan dengan JavaScript dan tetap diperiksa ulang pada server.
 </p>
 </section>
 </main>
-
 <footer class="site-footer">
 <div class="container footer-layout">
-<p>&copy; 2026 SisaBaik - Proyek pembelajaran Pengembangan Web .< /p>
+<p>&copy; 2026 SisaBaik - Proyek pembelajaran Pengembangan Web.</p>
 </div>
 </footer>
 </body>
